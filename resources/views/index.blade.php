@@ -7,7 +7,6 @@
     <title>Park Cronesteyn</title>
 </head>
 <body>
-@include('header')
 
 <h1>Park Cronesteyn</h1>
 
