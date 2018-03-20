@@ -25,4 +25,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //
     }
+    public function site_title() {
+        echo 'Park Cronesteyn';
+    }
 }

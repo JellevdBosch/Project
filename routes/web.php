@@ -12,5 +12,25 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+Route::get('/activiteiten', function () {
+    return view('activiteiten');
+});
+Route::get('/park-vereniging', function () {
+    return view('parkvereniging');
+});
+Route::get('/vogel-werkgroep', function () {
+    return view('vogelwerkgroep');
+});
+Route::get('/fotos', function () {
+    return view('fotos');
+});
+Route::get('/Contact', function () {
+    return view('contact');
+});
+Route::get('/extra-informatie', function () {
+    return view('extrainformatie');
+});
+
+
