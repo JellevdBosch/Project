@@ -1,15 +1,17 @@
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Park Cronesteyn</title>
-</head>
-<body>
+@extends('frontend.layout')
 
-<h1>Park Cronesteyn</h1>
+@section('title')
+    Park Cronesteyn
+@endsection
 
+@section('header')
+    Header
+@endsection
 
-</body>
-</html>
+@section('content')
+    Content
+@endsection
+
+@section('footer')
+    Footer
+@endsection
