@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateVogelewerkgroepTable extends Migration
+class CreateVogelwerkgroepTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,9 @@ class CreateVogelewerkgroepTable extends Migration
     public function up()
     {
         Schema::create('vogelwerkgroep', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unique();
+            $table->string('title');
+            $table->string('text');
             $table->timestamps();
         });
     }

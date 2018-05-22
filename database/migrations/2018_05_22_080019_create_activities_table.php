@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateActiviteitenTable extends Migration
+class CreateActivitiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,8 @@ class CreateActiviteitenTable extends Migration
     public function up()
     {
         Schema::create('activities', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('author');
+            $table->increments('id')->unique();
+            $table->foreign('author')->references('id')->on('users');
             $table->string('activity');
             $table->string('image_path');
             $table->string('date');
