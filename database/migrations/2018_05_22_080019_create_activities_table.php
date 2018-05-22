@@ -13,8 +13,12 @@ class CreateActiviteitenTable extends Migration
      */
     public function up()
     {
-        Schema::create('activiteiten', function (Blueprint $table) {
+        Schema::create('activities', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('author');
+            $table->string('activity');
+            $table->string('image_path');
+            $table->string('date');
             $table->timestamps();
         });
     }
