@@ -15,7 +15,8 @@ class CreateActivitiesTable extends Migration
     {
         Schema::create('activities', function (Blueprint $table) {
             $table->increments('id')->unique();
-            $table->foreign('author')->references('id')->on('users');
+            $table->integer('author_id')->unsigned();
+            $table->foreign('author_id')->references('id')->on('users');
             $table->string('activity');
             $table->string('image_path');
             $table->string('date');
