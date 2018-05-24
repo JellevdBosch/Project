@@ -1,5 +1,6 @@
 @import 'header.css';
 @import "footer.css";
+@import "views/vogelwerkgroep.css";
 
 * {
     color: black;
@@ -8,6 +9,9 @@
 }
 
 .wrapper {
-    width: 80%;
+    position: absolute;
+    left: 15%;
+    right: 15%;
+    width: 70%;
     height: 100%;
 }
