@@ -1,9 +1,10 @@
 @import 'header.css';
 @import "footer.css";
 @import "views/vogelwerkgroep.css";
+@import "sidebar.css";
 
 * {
-    color: black;
+    color: #272727;
     font-family: sans-serif;
     font-size: 14px;
 }
