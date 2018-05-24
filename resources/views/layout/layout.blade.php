@@ -5,10 +5,10 @@
         <title>@yield('title')</title>
     </head>
     <body>
-
-        @include('include.header')
-        @yield('content')
-        @include('include.footer')
-
+        <section class="wrapper">
+            @include('include.header')
+            @yield('content')
+            @include('include.footer')
+        </section>
     </body>
 </html>
