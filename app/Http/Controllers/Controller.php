@@ -10,4 +10,47 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    public function index()
+    {
+
+        return view('index');
+
+    }
+
+    public function activiteiten()
+    {
+
+        return view('activiteiten');
+
+    }
+
+    public function parkvereniging()
+    {
+
+        return view('parkvereniging');
+
+    }
+
+    public function vogelwerkgroep()
+    {
+
+        return view('vogelwerkgroep');
+
+    }
+
+    public function fotos()
+    {
+
+        return view('fotos');
+
+    }
+
+    public function contact()
+    {
+
+        return view('contact');
+
+    }
 }
+
