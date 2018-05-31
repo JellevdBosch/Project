@@ -5,11 +5,11 @@
     left: 0;
     text-align: center;
     width: 100%;
-    color: white;
+    color: #7B7B7B;
 }
 
 #footer-wrapper {
-    background: #272727;
+    background: #2B2B2B;
 }
 
 #footer-bottom {
@@ -47,7 +47,7 @@
 #footer a,
 #footer a:hover,
 #footer a:focus {
-    color: white !important;
+    color: #bfbfbf;
     text-decoration: none !important;
 }
 

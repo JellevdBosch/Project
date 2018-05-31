@@ -1,5 +1,64 @@
 <section id="sidebar">
     <div id="sidebar-wrapper">
-        @yield('sidebar-content')
+        <?php
+        switch (Route::current()) {
+            case 'index':
+                '<article class="sidebar-article">
+        <div class="sidebar-article-title">
+            <h5 class="">Test</h5>
+        </div>
+        <ul class="sidebar-list">
+            <li class="sidebar-list-item">
+                <button>Test</button>
+            </li>
+            <li class="sidebar-list-item">
+                <button>Test</button>
+            </li>
+        </ul>
+    </article>
+    <article class="sidebar-article">
+        <div class="sidebar-article-title">
+            <h5 class="">Test</h5>
+        </div>
+        <ul class="sidebar-list">
+            <li class="sidebar-list-item">
+                <button>Test</button>
+            </li>
+            <li class="sidebar-list-item">
+                <button>Test</button>
+            </li>
+        </ul>
+    </article>';
+                break;
+            default:
+                echo '<article class="sidebar-article">
+        <div class="sidebar-article-title">
+            <h5 class="">Test</h5>
+        </div>
+        <ul class="sidebar-list">
+            <li class="sidebar-list-item">
+                <button>Test</button>
+            </li>
+            <li class="sidebar-list-item">
+                <button>Test</button>
+            </li>
+        </ul>
+    </article>
+    <article class="sidebar-article">
+        <div class="sidebar-article-title">
+            <h5 class="">Test</h5>
+        </div>
+        <ul class="sidebar-list">
+            <li class="sidebar-list-item">
+                <button>Test</button>
+            </li>
+            <li class="sidebar-list-item">
+                <button>Test</button>
+            </li>
+        </ul>
+    </article>';
+                break;
+        }
+        ?>
     </div>
 </section>
