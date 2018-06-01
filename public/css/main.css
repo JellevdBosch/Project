@@ -2,6 +2,7 @@
 @import "footer.css";
 @import "views/vogelwerkgroep.css";
 @import "sidebar.css";
+@import "views/index.css";
 
 html {
     height: 100%;
