@@ -11,22 +11,19 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function index()
-    {
+    public function index() {
 
         return view('index');
 
     }
 
-    public function activiteiten()
-    {
+    public function activiteiten() {
 
         return view('activiteiten');
 
     }
 
-    public function parkvereniging()
-    {
+    public function parkvereniging() {
 
         return view('parkvereniging');
 
@@ -39,15 +36,13 @@ class Controller extends BaseController
 
     }
 
-    public function fotos()
-    {
+    public function fotos() {
 
         return view('fotos');
 
     }
 
-    public function contact()
-    {
+    public function contact() {
 
         return view('contact');
 

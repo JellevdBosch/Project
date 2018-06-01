@@ -1,4 +1,4 @@
-<?php use Illuminate\Support\Facades\Route;?>
+<?php use Illuminate\Support\Facades\Route;?>JTUR
 <section id="sidebar">
     <div id="sidebar-wrapper">
         <?php

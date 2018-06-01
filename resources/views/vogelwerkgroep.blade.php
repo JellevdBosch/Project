@@ -15,6 +15,7 @@ Vogelwerkgroep
             </div>
             <div class="col-md-6">
                 <p>
+                    {{  }}
                     Mei 2018
 
                     In maart zagen we nog wel wat grutto's in de weilanden, maar intussen vragen we ons af of er überhaupt zijn
