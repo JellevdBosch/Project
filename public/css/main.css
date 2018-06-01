@@ -25,9 +25,9 @@ body {
 }
 
 .wrapper {
-    position: absolute;
-    left: 10%;
-    right: 10%;
-    width: 80%;
+    left: 15%;
+    right: 15%;
+    width: 70%;
     height: 100%;
+    position: absolute;
 }

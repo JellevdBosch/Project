@@ -1,31 +1,31 @@
 <header id="header">
     <section id="header-wrapper">
-        <article id="main-logo">
+        <div id="main-logo">
             <img src="{{asset('images/logo.png')}}" alt="Polderpark Cronesteyn Logo">
-        </article>
-        <article id="main-nav">
+        </div>
+        <div id="main-nav">
             <nav id="main-nav-wrapper">
                 <ul>
                     <li>
-                        <a>Home</a>
+                        <button>Home</button>
                     </li>
                     <li>
-                        <a>Page</a>
+                        <button>Home</button>
                     </li>
                     <li>
-                        <a>Page</a>
+                        <button>Home</button>
                     </li>
                     <li>
-                        <a>Page</a>
+                        <button>Home</button>
                     </li>
                     <li>
-                        <a>Page</a>
+                        <button>Home</button>
                     </li>
                     <li>
-                        <a>Page</a>
+                        <button>Home</button>
                     </li>
                 </ul>
             </nav>
-        </article>
+        </div>
     </section>
 </header>
