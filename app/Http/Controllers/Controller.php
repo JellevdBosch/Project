@@ -29,8 +29,7 @@ class Controller extends BaseController
 
     }
 
-    public function vogelwerkgroep()
-    {
+    public function vogelwerkgroep() {
 
         return view('vogelwerkgroep');
 

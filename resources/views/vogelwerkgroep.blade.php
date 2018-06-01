@@ -10,13 +10,11 @@ Vogelwerkgroep
         <div class="container">
             <div class="col-md-4">
                 <p>
-                    kut njelle
+
                 </p>
             </div>
             <div class="col-md-6">
                 <p>
-                    {{  }}
-                    Mei 2018
 
                     In maart zagen we nog wel wat grutto's in de weilanden, maar intussen vragen we ons af of er überhaupt zijn
                     gebleven om te broeden. Kieviten en scholeksters zien we gelukkig nog wel, al is het dan nog steeds de vraag
@@ -28,10 +26,14 @@ Vogelwerkgroep
                     hebben afgelegd tegen de herhaalde vorstperiodes.
                 </p>
             </div>
+            <div>
+                rtrrrrrrrrrrrrrrrrrrrrrrrr
+            </div>
         </div>
 
 
 
     </section>
+
 @endsection
 
