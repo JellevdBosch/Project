@@ -40,3 +40,9 @@ Route::get('/fotos', 'Controller@fotos');
 //    return view('contact');
 //});
 Route::get('/contact', 'Controller@contact');
+
+
+
+Route::get('/test', 'Controller@test');
+
+Route::post('/test/register', 'Controller@create');
