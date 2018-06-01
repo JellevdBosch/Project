@@ -8,7 +8,6 @@
     @include('include.header')
         @yield('landing')
         <section class="page wrapper">
-            @include('include.sidebar')
             @yield('content')
         </section>
         @include('include.footer')
