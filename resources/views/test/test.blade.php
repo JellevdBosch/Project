@@ -6,9 +6,11 @@
 
 @section('content')
     <section id="content" style="padding-top:25px; width: calc(100% - 250px);float: right">
-        @if (Session::has('message'))
-            <div class="alert alert-info">{{ Session::get('message') }}</div>
+
+        @if (session('success'))
+            <div class="alert alert-success">{{ session('success') }}</div>
         @endif
+
         <form method="post" action="{{url('test/register')}}" enctype="multipart/form-data">
             @csrf
             <div class="row">
