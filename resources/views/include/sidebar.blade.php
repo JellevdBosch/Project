@@ -1,11 +1,13 @@
+<?php use Illuminate\Support\Facades\Route;?>
 <section id="sidebar">
     <div id="sidebar-wrapper">
         <?php
-        switch (Route::current()) {
-            case 'index':
-                '<article class="sidebar-article">
+        $action = Route::getCurrentRoute()->getActionName();
+        switch ($action) {
+            case strpos($action, 'index'):
+                echo '<article class="sidebar-article">
         <div class="sidebar-article-title">
-            <h5 class="">Test</h5>
+            <h5 class="">XD</h5>
         </div>
         <ul class="sidebar-list">
             <li class="sidebar-list-item">
