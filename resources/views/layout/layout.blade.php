@@ -5,8 +5,8 @@
         <title>@yield('title')</title>
     </head>
     <body>
-        <section class="wrapper">
-            @include('include.header')
+        @include('include.header')
+        <section class="page wrapper">
             @include('include.sidebar')
             @yield('content')
         </section>
