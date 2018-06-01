@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\Vogelwerkgroep;
-use Request;
+use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -67,9 +69,7 @@ class Controller extends BaseController
         $user->text = Request::get('text');
         $user->save();
 
-//        Session::flash('message', "Special message goes here");
-//        return Redirect::back();
-
+        Session::flash('success', 'Artikel is toegevoegd');
         return view('test/test');
     }
 }
