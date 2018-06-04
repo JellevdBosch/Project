@@ -59,19 +59,17 @@ class Controller extends BaseController
     public function test()
     {
         return view('test/test');
-        Session()->flush();
     }
 
-    public function create()
+    public function createArtikel()
     {
-        $user = new Vogelwerkgroep;
+        $artikel = new Vogelwerkgroep;
 
-        $user->title = Request::get('title');
-        $user->text = Request::get('text');
-        $user->save();
+        $artikel->title = Request::get('title');
+        $artikel->text = Request::get('text');
+        $artikel->save();
 
-        Session::flash('success', 'Artikel is toegevoegd');
-        return view('test/test');
+        return back()->with('success', 'Artikel is toegevoegd');
     }
 }
 
