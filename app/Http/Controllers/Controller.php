@@ -59,6 +59,7 @@ class Controller extends BaseController
     public function test()
     {
         return view('test/test');
+        Session()->flush();
     }
 
     public function create()
