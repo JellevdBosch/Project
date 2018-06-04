@@ -6,7 +6,7 @@
 
 @section('content')
     <section id="content" style="padding-top:25px; width: calc(100% - 250px);float: right">
-        <div class="jumbotron jumbotron-sm" style="background-color:#358CCE;">
+        <div class="jumbotron jumbotron-sm" style="background-color:#54c62b;">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-lg-12">
