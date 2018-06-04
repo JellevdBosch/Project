@@ -5,15 +5,9 @@ Vogelwerkgroep
 @endsection
 
 @section('content')
-    <section style="width: calc(100% - 250px);float: right">
-        <h1>@yield('title')</h1>
-        <div class="container">
-            <div class="col-md-4">
-                <p>
-
-                </p>
-            </div>
-            <div class="col-md-6">
+    <section style="width: calc(100% - 250px);float: right; margin-top: 120px;">
+        <h2>@yield('title')</h2>
+            <div class="col-md-7">
                 <p>
 
                     In maart zagen we nog wel wat grutto's in de weilanden, maar intussen vragen we ons af of er überhaupt zijn
@@ -27,7 +21,6 @@ Vogelwerkgroep
                 </p>
             </div>
             <div>
-                rtrrrrrrrrrrrrrrrrrrrrrrrr
             </div>
         </div>
 
