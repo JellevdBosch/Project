@@ -27,7 +27,6 @@ Vogelwerkgroep
                 </p>
             </div>
             <div>
-                rtrrrrrrrrrrrrrrrrrrrrrrrr
             </div>
         </div>
 
