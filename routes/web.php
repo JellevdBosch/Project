@@ -39,7 +39,7 @@ Route::get('/fotos', 'Controller@fotos');
 //Route::get('/contact', function () {
 //    return view('contact');
 //});
-Route::get('/contact', 'Controller@contact');
+Route::post('/contact', 'Controller@contact');
 
 
 
