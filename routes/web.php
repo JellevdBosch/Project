@@ -26,9 +26,9 @@ Route::get('/activiteiten', 'Controller@activiteiten');
 //});
 Route::get('/parkvereniging', 'Controller@parkvereniging');
 
-//Route::get('/vogelwerkgroep', function () {
-//    return view('vogelwerkgroep');
-//});
+Route::get('/vogelwerkgroep', function () {
+    return view('vogelwerkgroep');
+});
 Route::get('/vogelwerkgroep', 'Controller@vogelwerkgroep');
 
 //Route::get('/fotos', function () {
