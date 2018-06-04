@@ -31,3 +31,6 @@ body {
     height: 100%;
     position: absolute;
 }
+p {
+    color: #272727;
+}
