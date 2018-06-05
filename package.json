@@ -20,11 +20,7 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
-<<<<<<< Updated upstream
-        "gulp": "^3.9.1"
-=======
         "gulp": "^3.9.1",
         "npm": "^6.1.0"
->>>>>>> Stashed changes
     }
 }
