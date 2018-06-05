@@ -3,6 +3,7 @@
 @import "views/vogelwerkgroep.css";
 @import "sidebar.css";
 @import "views/index.css";
+@import "views/admin.css";
 
 html {
     height: 100%;
