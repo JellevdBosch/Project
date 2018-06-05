@@ -71,8 +71,5 @@ class Controller extends BaseController
 
         return back()->with('success', 'Artikel is toegevoegd');
     }
-    public function adminLink(){
-        return view('/admin');
-    }
 }
 

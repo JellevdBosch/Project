@@ -31,4 +31,9 @@ Route::get('/test', 'Controller@test');
 
 Route::post('/test', 'Controller@createArtikel');
 
-Route::get('/admin', 'Controller@adminLink');
+Route::get('/admin', 'AdminController@admin')
+    ->middleware('is_admin')
+    ->name('admin');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
