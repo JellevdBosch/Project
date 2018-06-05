@@ -31,4 +31,4 @@ Route::get('/test', 'Controller@test');
 
 Route::post('/test', 'Controller@createArtikel');
 
-Route::get('/admin');
+Route::get('/admin', 'Controller@adminLink');
