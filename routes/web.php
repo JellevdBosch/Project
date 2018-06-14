@@ -11,32 +11,35 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('index');
-//});
+
 Route::get('/', 'Controller@index');
 
-//Route::get('/activiteiten', function () {
-//    return view('activiteiten');
-//});
 Route::get('/activiteiten', 'Controller@activiteiten');
 
-//Route::get('/parkvereniging', function () {
-//    return view('parkvereniging');
-//});
 Route::get('/parkvereniging', 'Controller@parkvereniging');
 
-//Route::get('/vogelwerkgroep', function () {
-//    return view('vogelwerkgroep');
-//});
+Route::get('/vogelwerkgroep', function () {
+    return view('vogelwerkgroep');
+});
 Route::get('/vogelwerkgroep', 'Controller@vogelwerkgroep');
 
-//Route::get('/fotos', function () {
-//    return view('fotos');
-//});
 Route::get('/fotos', 'Controller@fotos');
 
-//Route::get('/contact', function () {
-//    return view('contact');
-//});
 Route::get('/contact', 'Controller@contact');
+Route::post('/contact', 'Controller@contact');
+
+Route::get('/test', 'Controller@test');
+
+Route::post('/test', 'Controller@createArtikel');
+
+Route::view('/admin', 'admin');
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

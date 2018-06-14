@@ -1,0 +1,21 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%
+}
+
+@media (min-width: 1200px) {
+    #landing {
+       height: 100vh;
+        z-index: -1;
+    }
+}
+
+section#articles {
+    margin-left: 32%;
+    width: 64%;
+}
+
+#articles .content {
+    padding-bottom: 30px;
+}

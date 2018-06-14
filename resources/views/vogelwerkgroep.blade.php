@@ -5,15 +5,9 @@ Vogelwerkgroep
 @endsection
 
 @section('content')
-    <section style="width: calc(100% - 250px);float: right">
-        <h1>@yield('title')</h1>
-        <div class="container">
-            <div class="col-md-4">
-                <p>
-
-                </p>
-            </div>
-            <div class="col-md-6">
+    <section style="width: calc(100% - 250px);float: right; margin-top: 130px;">
+            <div class="col-md-7">
+                <h2>@yield('title')</h2>
                 <p>
 
                     In maart zagen we nog wel wat grutto's in de weilanden, maar intussen vragen we ons af of er überhaupt zijn
@@ -26,8 +20,13 @@ Vogelwerkgroep
                     hebben afgelegd tegen de herhaalde vorstperiodes.
                 </p>
             </div>
+        <div class="col-md-3">
+            <h3>Vogels</h3>
+            <img src="/images/vogelfoto.jpeg" alt="" width="250px" height="200px">
+            <i> Information: <b> Vogel Bird</b></i><br>
+            <u> Shot date: 04-04-2018</u>
+        </div>
             <div>
-                rtrrrrrrrrrrrrrrrrrrrrrrrr
             </div>
         </div>
 

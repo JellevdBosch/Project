@@ -1,0 +1,35 @@
+.landing-intro {
+    display: table;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background: url("../images/landing.jpg") no-repeat;
+    background-size: cover;
+}
+
+.landing-intro .landing-inner {
+    display: table-cell;
+    vertical-align: bottom;
+    padding-bottom: 100px;
+}
+
+.landing-content {
+    margin: auto;
+    text-align: center;
+}
+
+.landing-content .btn.btn-success,
+.landing-content .btn.btn-success:focus,
+.landing-content .btn.btn-success:active {
+    width: 256px;
+    height: 64px;
+    padding: 12px 20px;
+    background-color: #5cb85c80;
+    border-color: #4cae4c66;
+    transition: all .5s;
+}
+
+.landing-content .btn.btn-success:hover {
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}

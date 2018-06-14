@@ -1,9 +1,25 @@
+#main-nav-dropdown {
+    display: none;
+}
+
+#main-nav-wrapper ul li {
+    padding: 0;
+}
+
+#main-nav-wrapper ul li a {
+    display: block;
+    text-decoration: none;
+}
+
 /* Large desktop */
-@media (min-width: 1200px) {
+@media (min-width: 1200.1px) {
 
     #header {
         width: 100%;
-        height: 150px;
+        height: 100px;
+        background: white;
+        z-index: 1000;
+        position: fixed;
     }
 
     #header-wrapper {
@@ -13,20 +29,21 @@
     }
 
     #main-logo {
-        width: 200px;
+        width: 20%;
         height: 100%;
         float: left;
     }
 
     #main-logo img {
         height: inherit;
-        width: inherit;
         padding: 10px;
+        width: initial;
+        max-width: 100%;
     }
 
     #main-nav {
         height: 100%;
-        width: calc(100% - 200px);
+        width: 60%;
         float: left;
     }
 
@@ -37,20 +54,452 @@
 
     #main-nav-wrapper ul {
         height: 100%;
+        list-style: none;
+        width: 100%;
+        padding: 0;
+        float: left;
+    }
+    #main-nav-wrapper ul li {
+        float: left;
+        font-weight: 600;
+        width: auto;
+        height: inherit;
+        margin: 0 10px;
+        padding-bottom: 2px;
+        box-sizing: border-box;
+    }
+
+    #main-nav-wrapper ul li a {
+        height: auto;
+        width: 100%;
+        background: none;
+        border: none;
+        font-size: 1.1em;
+        color: #2B2B2B;
+        box-sizing: border-box;
+        padding: 4px;
+        line-height: 50px;
+    }
+
+    #main-nav-wrapper ul li a:hover,
+    #main-nav-wrapper ul li a:active {
+        background: none;
+        border-bottom: 2px solid #5d963f;
+        color: #5d963f;
+        font-weight: 600;
+    }
+
+    #login-info {
+        width: 20%;
+        height: 100%;
+        float: right;
+    }
+
+    #login-info-wrapper {
+        padding: 10px;
+        height: inherit;
+    }
+
+    #login-info p {
+        width: 100%;
+        height: inherit;
+        text-align: center;
+    }
+
+    #login-info p b {
+        line-height: 50px;
+        font-size: 1.1em;
+    }
+}
+
+@media (min-width: 979.1px) and (max-width: 1200px) {
+    #header {
+        width: 100%;
+        height: 100px;
+        background: white;
+        z-index: 1000;
+        position: fixed;
+    }
+
+    #header-wrapper {
+        width: inherit;
+        height: inherit;
+        padding: 10px 15px;
+    }
+
+    #main-logo {
+        width: 15%;
+        height: 100%;
+        float: left;
+    }
+
+    #main-logo img {
+        height: inherit;
+        padding: 10px;
+        width: auto;
+        max-width: 100%;
+    }
+
+    #main-nav {
+        height: 100%;
+        width: 65%;
+        float: left;
+    }
+
+    #main-nav-wrapper {
+        padding: 10px;
+        height: inherit;
+    }
+
+    #main-nav-wrapper ul {
+        height: 100%;
+        list-style: none;
+        width: 100%;
+        padding: 0;
+        float: left;
+    }
+    #main-nav-wrapper ul li {
+        float: left;
+        font-weight: 600;
+        width: auto;
+        height: inherit;
+        margin: 0 10px;
+        padding-bottom: 2px;
+        box-sizing: border-box;
+    }
+
+    #main-nav-wrapper ul li a {
+        height: inherit;
+        width: 100%;
+        background: none;
+        border: none;
+        font-size: 1em;
+        color: #2B2B2B;
+        box-sizing: border-box;
+        padding: 4px;
+        line-height: 50px;
+    }
+
+    #main-nav-wrapper ul li a:hover,
+    #main-nav-wrapper ul li a:active {
+        background: none;
+        border-bottom: 2px solid #5d963f;
+        color: #5d963f;
+        font-weight: 600;
+    }
+
+    #login-info {
+        width: 20%;
+        height: 100%;
+        float: right;
+    }
+
+    #login-info-wrapper {
+        padding: 10px;
+        height: inherit;
+    }
+
+    #login-info p {
+        width: 100%;
+        height: inherit;
+        text-align: center;
+    }
+    #login-info p b {
+        line-height: 50px;
+        font-size: 1em;
     }
 }
 
 /* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 767.1px) and (max-width: 979px) {
+    #header {
+        width: 100%;
+        height: 100px;
+        background: white;
+        z-index: 1000;
+        position: fixed;
+    }
 
+    #header-wrapper {
+        width: inherit;
+        height: inherit;
+        padding: 10px 15px;
+    }
+
+    #main-logo {
+        width: 15%;
+        height: 100%;
+        float: left;
+    }
+
+    #main-logo img {
+        height: inherit;
+        padding: 10px;
+        width: auto;
+        max-width: 100%;
+    }
+
+    #main-nav {
+        height: 100%;
+        width: 70%;
+        float: left;
+    }
+
+    #main-nav-wrapper {
+        padding: 10px 5px;
+        height: inherit;
+    }
+
+    #main-nav-wrapper ul {
+        height: 100%;
+        list-style: none;
+        width: 100%;
+        padding: 0;
+        float: left;
+    }
+    #main-nav-wrapper ul li {
+        float: left;
+        font-weight: 600;
+        width: auto;
+        height: inherit;
+        margin: 0 5px;
+        padding-bottom: 2px;
+        box-sizing: border-box;
+    }
+
+    #main-nav-wrapper ul li a {
+        height: inherit;
+        width: 100%;
+        background: none;
+        border: none;
+        font-size: 1em;
+        color: #2B2B2B;
+        box-sizing: border-box;
+        padding:0;
+        line-height: 50px;
+    }
+
+    #main-nav-wrapper ul li a:hover,
+    #main-nav-wrapper ul li a:active {
+        background: none;
+        border-bottom: 2px solid #5d963f;
+        color: #5d963f;
+        font-weight: 600;
+    }
+
+    #login-info {
+        width: 15%;
+        height: 100%;
+        float: right;
+    }
+
+    #login-info-wrapper {
+        padding: 10px;
+        height: inherit;
+    }
+
+    #login-info p {
+        width: 100%;
+        height: inherit;
+        text-align: center;
+    }
+    #login-info p b {
+        line-height: 50px;
+        font-size: 1em;
+    }
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
+    #header {
+        width: 100%;
+        height: 70px;
+        background: white;
+        z-index: 1000;
+        position: fixed;
+    }
 
+    #header-wrapper {
+        width: inherit;
+        height: inherit;
+        padding: 10px 15px;
+    }
+
+    /*DROPDOWN*/
+    #main-nav-dropdown {
+        display: block;
+        float: left;
+
+    }
+    #nav-drop {
+        height: inherit;
+        width: 100%;
+        margin: 0!important;
+    }
+    #nav-drop>li {
+        width:inherit;
+        height: inherit;
+    }
+    #nav-drop>li>a{
+        display: inline-block;
+    }
+    #nav-drop>li>a:hover,
+    #nav-drop>li>a:active {
+        background: none;
+    }
+    #nav-drop>li>a>span {
+        color: #000;
+        font-size: 24px;
+        width: inherit;
+        height: inherit;
+    }
+    #nav-drop>li>a>span:hover,
+    #nav-drop>li>a>span:active,
+    #nav-drop>li>a>span:focus{
+        color: #5d963f;
+    }
+    .dropdown-menu {
+        background-color: #fff;
+        border-radius:4px;
+        box-shadow:none;
+        margin-top:20px;
+        width:auto;
+    }
+    .dropdown-menu>li>a {
+        color:#428bca;
+    }
+    .open .dropdown-menu {
+        background-color: #fff!important;
+
+    }
+    .nav .open > a {
+        background: transparent!important;
+    }
+    .nav .open > a:hover,
+    .nav .open > a:active,
+    .nav .open > a:focus {
+        background: transparent!important;
+    }
+    /*DROPDOWN*/
+
+    #main-logo {
+        width: 80%;
+        height: 100%;
+        float: left;
+        text-align: center;
+    }
+
+    #main-logo img {
+        height: inherit;
+        width: auto;
+        max-width: 100%;
+    }
+
+    #main-nav {
+        display: none;
+    }
+
+    #main-nav-dropdown {
+        height: 100%;
+        width: 10%;
+        float: left;
+    }
+
+    #nav-dropdown {
+        display: block;
+    }
+
+    #login-info {
+        width: 10%;
+        height: 100%;
+        float: right;
+    }
+
+    #login-info p {
+        width: 100%;
+        height: inherit;
+        text-align: center;
+    }
+    #login-info p b {
+        font-size: 1em;
+    }
+
+
+
+
+    /*.dropdown ul.dropdown-menu:before {*/
+    /*content: "";*/
+    /*border-bottom: 10px solid #fff;*/
+    /*border-right: 10px solid transparent;*/
+    /*border-left: 10px solid transparent;*/
+    /*position: absolute;*/
+    /*top: -10px;*/
+    /*right: 16px;*/
+    /*z-index: 10;*/
+    /*}*/
+    /*.dropdown ul.dropdown-menu:after {*/
+    /*content: "";*/
+    /*border-bottom: 12px solid #ccc;*/
+    /*border-right: 12px solid transparent;*/
+    /*border-left: 12px solid transparent;*/
+    /*position: absolute;*/
+    /*top: -12px;*/
+    /*right: 14px;*/
+    /*z-index: 9;*/
+    /*}*/
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+    #header {
+        width: 100%;
+        height: 80px;
+        background: white;
+        z-index: 1000;
+        position: fixed;
+    }
 
+    #header-wrapper {
+        width: inherit;
+        height: inherit;
+        padding: 0;
+    }
+
+    #main-logo {
+        width: 70%;
+        height: 100%;
+        float: left;
+    }
+
+    #main-logo img {
+        height: inherit;
+        padding: 10px;
+        width: auto;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    #main-nav {
+        display: none;
+    }
+
+    #main-nav-dropdown {
+        display: block;
+        width: 15%;
+    }
+
+    #login-info {
+        width: 15%;
+        height: inherit;
+        float: right;
+    }
+
+    #login-info p {
+        width: 100%;
+        height: inherit;
+        text-align: center;
+    }
+    #login-info p b {
+        font-size: 1em;
+    }
 }

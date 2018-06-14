@@ -1,7 +1,10 @@
 @import 'header.css';
+@import 'landing.css';
 @import "footer.css";
 @import "views/vogelwerkgroep.css";
 @import "sidebar.css";
+@import "views/index.css";
+@import "views/admin.css";
 
 html {
     height: 100%;
@@ -24,9 +27,15 @@ body {
 }
 
 .wrapper {
-    position: absolute;
-    left: 10%;
-    right: 10%;
-    width: 80%;
-    height: 100%;
+    left: 15%;
+    right: 15%;
+    width: 70%;
+}
+
+p {
+    color: #272727;
+}
+
+#sidebar {
+    display: none;
 }
