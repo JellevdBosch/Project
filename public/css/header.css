@@ -334,65 +334,52 @@
     #nav-drop {
         height: inherit;
         width: 100%;
-    }
-    .navbar-nav {
         margin: 0!important;
     }
-    .dropdown {
+    #nav-drop>li {
         width:inherit;
         height: inherit;
     }
-    .navbar-nav > li > a {
-        padding: 0!important;
+    #nav-drop>li>a{
         display: inline-block;
     }
-    .dropdown-menu {
-        background-color: #2B2B2B;
-        width: 300%;
+    #nav-drop>li>a:hover,
+    #nav-drop>li>a:active {
+        background: none;
     }
-
-    .dropdown-toggle span {
+    #nav-drop>li>a>span {
         color: #000;
         font-size: 24px;
+        width: inherit;
+        height: inherit;
     }
-    .dropdown-menu>li>a {
-        color:#428bca;
+    #nav-drop>li>a>span:hover,
+    #nav-drop>li>a>span:active,
+    #nav-drop>li>a>span:focus{
+        color: #5d963f;
     }
-    .dropdown ul.dropdown-menu {
+    .dropdown-menu {
+        background-color: #fff;
         border-radius:4px;
         box-shadow:none;
         margin-top:20px;
         width:auto;
     }
-    /*.dropdown ul.dropdown-menu:before {*/
-    /*content: "";*/
-    /*border-bottom: 10px solid #fff;*/
-    /*border-right: 10px solid transparent;*/
-    /*border-left: 10px solid transparent;*/
-    /*position: absolute;*/
-    /*top: -10px;*/
-    /*right: 16px;*/
-    /*z-index: 10;*/
-    /*}*/
-    /*.dropdown ul.dropdown-menu:after {*/
-    /*content: "";*/
-    /*border-bottom: 12px solid #ccc;*/
-    /*border-right: 12px solid transparent;*/
-    /*border-left: 12px solid transparent;*/
-    /*position: absolute;*/
-    /*top: -12px;*/
-    /*right: 14px;*/
-    /*z-index: 9;*/
-    /*}*/
-
-    .navbar-nav .open .dropdown-menu {
-        background-color: #fff!important;
+    .dropdown-menu>li>a {
+        color:#428bca;
     }
-
-    .dropdown-menu {
+    .open .dropdown-menu {
         background-color: #fff!important;
-    }
 
+    }
+    .nav .open > a {
+        background: transparent!important;
+    }
+    .nav .open > a:hover,
+    .nav .open > a:active,
+    .nav .open > a:focus {
+        background: transparent!important;
+    }
     /*DROPDOWN*/
 
     #main-logo {
@@ -436,6 +423,30 @@
     #login-info p b {
         font-size: 1em;
     }
+
+
+
+
+    /*.dropdown ul.dropdown-menu:before {*/
+    /*content: "";*/
+    /*border-bottom: 10px solid #fff;*/
+    /*border-right: 10px solid transparent;*/
+    /*border-left: 10px solid transparent;*/
+    /*position: absolute;*/
+    /*top: -10px;*/
+    /*right: 16px;*/
+    /*z-index: 10;*/
+    /*}*/
+    /*.dropdown ul.dropdown-menu:after {*/
+    /*content: "";*/
+    /*border-bottom: 12px solid #ccc;*/
+    /*border-right: 12px solid transparent;*/
+    /*border-left: 12px solid transparent;*/
+    /*position: absolute;*/
+    /*top: -12px;*/
+    /*right: 14px;*/
+    /*z-index: 9;*/
+    /*}*/
 }
 
 /* Landscape phones and down */
