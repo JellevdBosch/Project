@@ -1,45 +1,35 @@
-.grid-landing {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    width: 100vw;
+.landing-intro {
+    display: table;
     height: 100%;
+    width: 100%;
+    margin: auto;
+    background: url("../images/landing.jpg") no-repeat;
+    background-size: cover;
 }
 
-.landing-item{
-    grid-column: 2;
-    grid-row: 3;
-    justify-self: center;
+.landing-intro .landing-inner {
+    display: table-cell;
+    vertical-align: bottom;
+    padding-bottom: 100px;
 }
 
-.landing-item .btn.btn-success {
+.landing-content {
+    margin: auto;
+    text-align: center;
+}
+
+.landing-content .btn.btn-success,
+.landing-content .btn.btn-success:focus,
+.landing-content .btn.btn-success:active {
+    width: 256px;
+    height: 64px;
     padding: 12px 20px;
-    color: black;
     background-color: #5cb85c80;
     border-color: #4cae4c66;
     transition: all .5s;
 }
 
-.landing-item .btn.btn-success:hover {
-    color: white;
+.landing-content .btn.btn-success:hover {
     background-color: #5cb85c;
     border-color: #4cae4c;
-}
-
-.landing-item.image {
-    grid-column: 1/ span 3;
-    grid-row: 1/ span 3;
-    justify-self: unset;
-    align-self: unset;
-    margin: 0;
-    padding: 0;
-}
-
-.landing-item.image .image {
-    background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2014/05/23/356373/21df65eddd49cf3c8a46bc62c8149a53-1000.jpg");
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
