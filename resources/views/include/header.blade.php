@@ -2,11 +2,11 @@
     <section id="header-wrapper">
         <div id="main-nav-dropdown">
 
-                <ul class="nav navbar-nav">
+                <ul id="nav-drop" class="nav navbar-nav">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle " data-toggle="dropdown"><span class="glyphicon glyphicon-user pull-right"></span></a>
+                        <a href="#" class="dropdown-toggle " data-toggle="dropdown"><span class=" glyphicon glyphicon-align-justify"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Account Settings <span class="glyphicon glyphicon-cog pull-right"></span></a></li>
+                            <li><a href="#">Account Settings <span class=" glyphicon glyphicon-align-justify  pull-right"></span></a></li>
                             <li class="divider"></li>
                             <li><a href="#">User stats <span class="glyphicon glyphicon-stats pull-right"></span></a></li>
                             <li class="divider"></li>

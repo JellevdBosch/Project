@@ -1,4 +1,4 @@
-@extends('layout.layout')
+@extends('layout.adminlayout')
 
 @section('title')
     Admin
@@ -9,7 +9,7 @@
         <h2>Admin page</h2>
         <div class="container">
             <div class="col-md-2">
-                <a href="/edit-home">Home</a>
+                <a href="/">Home</a>
             </div>
 
         </div>
