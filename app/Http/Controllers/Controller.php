@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 use App\Vogelwerkgroep;
 use Illuminate\Support\Facades\Request;
-use Illuminate\Support\Facades\Session;
-use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -16,8 +15,12 @@ class Controller extends BaseController
 
     public function index()
     {
+	    $recentpost = DB::table('vogelwerkgroep')
+		    ->orderBy('created_at', 'desc')
+		    ->limit(5)
+		    ->get();
 
-        return view('index');
+	    return view('index', ['recentpost' => $recentpost]);
 
     }
 
