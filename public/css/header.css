@@ -211,7 +211,7 @@
 }
 
 /* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 767.1px) and (max-width: 979px) {
     #header {
         width: 100%;
         height: 100px;
@@ -313,7 +313,7 @@
 @media (max-width: 767px) {
     #header {
         width: 100%;
-        height: 80px;
+        height: 70px;
         background: white;
         z-index: 1000;
         position: fixed;
@@ -336,14 +336,24 @@
         width: 100%;
     }
     .navbar-nav {
-        margin: 0;
+        margin: 0!important;
     }
     .dropdown {
-        background:#fff;
-        width:100%;
+        width:inherit;
+        height: inherit;
     }
+    .navbar-nav > li > a {
+        padding: 0!important;
+        display: inline-block;
+    }
+    .dropdown-menu {
+        background-color: #2B2B2B;
+        width: 300%;
+    }
+
     .dropdown-toggle span {
         color: #000;
+        font-size: 24px;
     }
     .dropdown-menu>li>a {
         color:#428bca;
@@ -352,27 +362,35 @@
         border-radius:4px;
         box-shadow:none;
         margin-top:20px;
-        width:inherit;
+        width:auto;
     }
-    .dropdown ul.dropdown-menu:before {
-        content: "";
-        border-bottom: 10px solid #fff;
-        border-right: 10px solid transparent;
-        border-left: 10px solid transparent;
-        position: absolute;
-        top: -10px;
-        right: 16px;
-        z-index: 10;
+    /*.dropdown ul.dropdown-menu:before {*/
+    /*content: "";*/
+    /*border-bottom: 10px solid #fff;*/
+    /*border-right: 10px solid transparent;*/
+    /*border-left: 10px solid transparent;*/
+    /*position: absolute;*/
+    /*top: -10px;*/
+    /*right: 16px;*/
+    /*z-index: 10;*/
+    /*}*/
+    /*.dropdown ul.dropdown-menu:after {*/
+    /*content: "";*/
+    /*border-bottom: 12px solid #ccc;*/
+    /*border-right: 12px solid transparent;*/
+    /*border-left: 12px solid transparent;*/
+    /*position: absolute;*/
+    /*top: -12px;*/
+    /*right: 14px;*/
+    /*z-index: 9;*/
+    /*}*/
+
+    .navbar-nav .open .dropdown-menu {
+        background-color: #fff!important;
     }
-    .dropdown ul.dropdown-menu:after {
-        content: "";
-        border-bottom: 12px solid #ccc;
-        border-right: 12px solid transparent;
-        border-left: 12px solid transparent;
-        position: absolute;
-        top: -12px;
-        right: 14px;
-        z-index: 9;
+
+    .dropdown-menu {
+        background-color: #fff!important;
     }
 
     /*DROPDOWN*/
@@ -386,7 +404,6 @@
 
     #main-logo img {
         height: inherit;
-        padding: 10px;
         width: auto;
         max-width: 100%;
     }
@@ -406,10 +423,10 @@
     }
 
     #login-info {
-         width: 10%;
-         height: 100%;
-         float: right;
-     }
+        width: 10%;
+        height: 100%;
+        float: right;
+    }
 
     #login-info p {
         width: 100%;
