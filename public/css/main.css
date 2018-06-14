@@ -36,3 +36,7 @@ body {
 p {
     color: #272727;
 }
+
+#sidebar {
+    display: none;
+}
