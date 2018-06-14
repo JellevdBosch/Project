@@ -26,6 +26,7 @@ Route::get('/vogelwerkgroep', 'Controller@vogelwerkgroep');
 Route::get('/fotos', 'Controller@fotos');
 
 Route::get('/contact', 'Controller@contact');
+Route::post('/contact', 'Controller@contact');
 
 Route::get('/test', 'Controller@test');
 
