@@ -15,3 +15,5 @@ yarn-error.log
 package-lock\.json
 
 package\.json
+
+composer\.lock
