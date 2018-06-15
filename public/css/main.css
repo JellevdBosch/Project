@@ -27,9 +27,8 @@ body {
 }
 
 .wrapper {
-    left: 15%;
-    right: 15%;
-    width: 70%;
+    margin: auto;
+    width: 50%;
 }
 
 p {
