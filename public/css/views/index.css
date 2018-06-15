@@ -19,3 +19,8 @@ section#articles {
 #articles .content {
     padding-bottom: 30px;
 }
+#articles .inner .intro img.image {
+    width: 320px;
+    height: auto;
+    float: right;
+}

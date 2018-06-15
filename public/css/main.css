@@ -36,6 +36,13 @@ p {
     color: #272727;
 }
 
+h2,h3 {
+    color: #5d963f!important;
+}
+i {
+    color: #979797;
+}
+
 #sidebar {
     display: none;
 }
