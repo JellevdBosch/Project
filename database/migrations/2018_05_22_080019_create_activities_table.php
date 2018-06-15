@@ -17,7 +17,7 @@ class CreateActivitiesTable extends Migration
             $table->increments('id')->unique();
             $table->integer('author_id')->unsigned();
             $table->foreign('author_id')->references('id')->on('users');
-            $table->string('activity');
+            $table->text('activity');
             $table->string('image_path');
             $table->string('date');
             $table->timestamps();

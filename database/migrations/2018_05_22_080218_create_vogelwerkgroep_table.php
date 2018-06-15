@@ -16,7 +16,7 @@ class CreateVogelwerkgroepTable extends Migration
         Schema::create('vogelwerkgroep', function (Blueprint $table) {
             $table->increments('id')->unique();
             $table->string('title');
-            $table->string('text');
+            $table->text('text');
             $table->timestamps();
         });
     }
