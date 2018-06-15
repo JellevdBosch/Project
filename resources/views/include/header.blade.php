@@ -10,11 +10,11 @@
                             <li class="divider"></li>
                             <li><a href="{!! action('Controller@activiteiten') !!}">Activiteiten<span class="glyphicon glyphicon-text-color pull-right"></span></a></li>
                             <li class="divider"></li>
-                            <li><a href="{!! action('Controller@parkvereniging') !!}">Parkvereniging<span class=" glyphicon glyphicon-plane  pull-right"></span></a></li>
+                            <li><a href="{!! action('Controller@parkvereniging') !!}">Parkvereniging<span class="glyphicon glyphicon-plane  pull-right"></span></a></li>
                             <li class="divider"></li>
-                            <li><a href="{!! action('Controller@vogelwerkgroep') !!}">Vogelwerkgroep<span class="glyphicon glyphicon-picture pull-right"></span></a></li>
+                            <li><a href="{!! action('Controller@vogelwerkgroep') !!}">Vogelwerkgroep<span class="glyphicon glyphicon-leaf pull-right"></span></a></li>
                             <li class="divider"></li>
-                            <li><a href="{!! action('Controller@fotos') !!}">Foto's<span class=" glyphicon glyphicon-earphone pull-right"></span></a></li>
+                            <li><a href="{!! action('Controller@fotos') !!}">Foto's<span class="glyphicon glyphicon-picture pull-right"></span></a></li>
                             <li class="divider"></li>
                             <li><a href="{!! action('Controller@contact') !!}">Contact<span class=" glyphicon glyphicon-earphone pull-right"></span></a></li>
                         </ul>
