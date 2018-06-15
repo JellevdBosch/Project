@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <section style="float:left;margin-top: 130px;">
+    <section>
         <div class="container">
             <div class="col-md-4">
                 <h2>@yield('title')</h2>
@@ -23,7 +23,7 @@
                     hebben afgelegd tegen de herhaalde vorstperiodes.
                 </p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <h3>Vogels</h3>
                 <img src="{{asset('/images/vogelfoto.jpeg')}}" alt="Foto van vogel" width="250px" height="200px">
                 <i> Information: <b> Vogel Bird</b></i><br>
