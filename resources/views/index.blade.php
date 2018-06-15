@@ -8,6 +8,7 @@
     <section id="landing" class="landing-intro">
         <div class="landing-inner">
             <div class="landing-content">
+                <h1>Polderpark Cronesteyn </h1>
                 <button type="button" class="btn btn-success">Success</button>
             </div>
         </div>

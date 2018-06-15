@@ -10,9 +10,14 @@
 .landing-intro .landing-inner {
     display: table-cell;
     vertical-align: bottom;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
 }
-
+h1 {
+    color: #ffffff!important;
+    font-size: 36px;
+    padding-bottom: 20px;
+    text-shadow: 1px 3px 2px #000000;
+}
 .landing-content {
     margin: auto;
     text-align: center;

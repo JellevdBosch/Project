@@ -5,8 +5,9 @@ Vogelwerkgroep
 @endsection
 
 @section('content')
-    <section style="width: calc(100% - 250px);float: right; margin-top: 130px;">
-            <div class="col-md-7">
+    <section style="float:left;margin-top: 130px;">
+        <div class="container">
+            <div class="col-md-4">
                 <h2>@yield('title')</h2>
                 <p>
 
@@ -20,7 +21,7 @@ Vogelwerkgroep
                     hebben afgelegd tegen de herhaalde vorstperiodes.
                 </p>
             </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             <h3>Vogels</h3>
             <img src="/images/vogelfoto.jpeg" alt="" width="250px" height="200px">
             <i> Information: <b> Vogel Bird</b></i><br>
@@ -29,6 +30,7 @@ Vogelwerkgroep
             <div>
             </div>
         </div>
+
 
 
 
