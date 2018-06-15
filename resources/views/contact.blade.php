@@ -10,8 +10,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-lg-12">
-                        <h1 class="h1" style="color:white;">
-                            Heeft u een vraag? <br><small style="color:white;">Dan kunt u dit formulier invullen :)</small></h1>
+                        <h2 class="h1" style="color:white;">
+                            Heeft u een vraag? <br><small style="color:white;">Dan kunt u dit formulier invullen</small></h2>
                     </div>
                 </div>
             </div>
