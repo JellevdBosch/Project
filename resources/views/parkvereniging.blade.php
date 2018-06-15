@@ -7,7 +7,6 @@
 @section('content')
     <section id="content">
         <div class="card mb-3">
-            <img class="card-img-top" src="{{asset('images/big_foto_header.jpg')}}" align="foto1" alt="Card image cap">
             <div class="card-body">
                 <h3 class="card-title">Vereniging vrienden polderpark Cronesteyn</h3>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
@@ -21,7 +20,7 @@
                     metus varius laoreet.
                     Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
                     Curabitur ullamcorper ultricies nisi. Nam eget dui.</p>
-                <div class="container" style="color:green" width="2500" height="3500">
+                <div>
                     <img src="{{asset('images/Evert%20Cornet.jpg')}}" width="250" height="365"
                          alt="Ever Cornet designer van het park cronesteyn">
                     <img src="{{asset('images/daslook%201.jpg')}}" width="250" height="365" alt="bloem">
