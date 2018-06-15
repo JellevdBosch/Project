@@ -29,7 +29,7 @@
     }
 
     #main-logo {
-        width: 20%;
+        width: 15%;
         height: 100%;
         float: left;
     }
@@ -43,7 +43,7 @@
 
     #main-nav {
         height: 100%;
-        width: 60%;
+        width: 70%;
         float: left;
     }
 
@@ -90,7 +90,7 @@
     }
 
     #login-info {
-        width: 20%;
+        width: 15%;
         height: 100%;
         float: right;
     }
@@ -340,16 +340,24 @@
         width:inherit;
         height: inherit;
     }
+    .navbar-nav > li > a {
+        padding: 0!important;
+    }
+
     #nav-drop>li>a{
         display: inline-block;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%,-50%);
     }
     #nav-drop>li>a:hover,
-    #nav-drop>li>a:active {
+    #nav-drop>li>a:active,
+    #nav-drop>li>a:focus {
         background: none;
     }
     #nav-drop>li>a>span {
         color: #000;
-        font-size: 24px;
+        font-size: xx-large;
         width: inherit;
         height: inherit;
     }
@@ -370,7 +378,7 @@
     }
     .open .dropdown-menu {
         background-color: #fff!important;
-
+        position: absolute!important;
     }
     .nav .open > a {
         background: transparent!important;

@@ -6,15 +6,17 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle " data-toggle="dropdown"><span class=" glyphicon glyphicon-align-justify"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Account Settings <span class=" glyphicon glyphicon-align-justify  pull-right"></span></a></li>
+                            <li><a href="{!! action('Controller@index') !!}">Home<span class=" glyphicon glyphicon-home pull-right"></span></a></li>
                             <li class="divider"></li>
-                            <li><a href="#">User stats <span class="glyphicon glyphicon-stats pull-right"></span></a></li>
+                            <li><a href="{!! action('Controller@activiteiten') !!}">Activiteiten<span class="glyphicon glyphicon-text-color pull-right"></span></a></li>
                             <li class="divider"></li>
-                            <li><a href="#">Messages <span class="badge pull-right"> 42 </span></a></li>
+                            <li><a href="{!! action('Controller@parkvereniging') !!}">Parkvereniging<span class=" glyphicon glyphicon-plane  pull-right"></span></a></li>
                             <li class="divider"></li>
-                            <li><a href="#">Favourites Snippets <span class="glyphicon glyphicon-heart pull-right"></span></a></li>
+                            <li><a href="{!! action('Controller@vogelwerkgroep') !!}">Vogelwerkgroep<span class="glyphicon glyphicon-picture pull-right"></span></a></li>
                             <li class="divider"></li>
-                            <li><a href="#">Sign Out <span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
+                            <li><a href="{!! action('Controller@fotos') !!}">Foto's<span class=" glyphicon glyphicon-earphone pull-right"></span></a></li>
+                            <li class="divider"></li>
+                            <li><a href="{!! action('Controller@contact') !!}">Contact<span class=" glyphicon glyphicon-earphone pull-right"></span></a></li>
                         </ul>
                     </li>
                 </ul>
@@ -28,22 +30,22 @@
             <nav id="main-nav-wrapper">
                 <ul>
                     <li>
-                        <a>Home</a>
+                        <a href="{!! action('Controller@index') !!}">Home</a>
                     </li>
                     <li>
-                        <a>Activiteiten</a>
+                        <a href="{!! action('Controller@activiteiten') !!}">Activiteiten</a>
                     </li>
                     <li>
-                        <a>Parkvereniging</a>
+                        <a href="{!! action('Controller@parkvereniging') !!}">Parkvereniging</a>
                     </li>
                     <li>
-                        <a>Vogelwerkgroep</a>
+                        <a href="{!! action('Controller@vogelwerkgroep') !!}">Vogelwerkgroep</a>
                     </li>
                     <li>
-                        <a>Foto's</a>
+                        <a href="{!! action('Controller@fotos') !!}">Foto's</a>
                     </li>
                     <li>
-                        <a>Contact</a>
+                        <a href="{!! action('Controller@contact') !!}">Contact</a>
                     </li>
                 </ul>
             </nav>
