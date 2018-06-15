@@ -6,17 +6,17 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle " data-toggle="dropdown"><span class=" glyphicon glyphicon-align-justify"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="{!! action('Controller@index') !!}">Home<span class=" glyphicon glyphicon-home pull-right"></span></a></li>
-                            <li class="divider"></li>
-                            <li><a href="{!! action('Controller@activiteiten') !!}">Activiteiten<span class="glyphicon glyphicon-text-color pull-right"></span></a></li>
-                            <li class="divider"></li>
-                            <li><a href="{!! action('Controller@parkvereniging') !!}">Parkvereniging<span class="glyphicon glyphicon-plane  pull-right"></span></a></li>
-                            <li class="divider"></li>
-                            <li><a href="{!! action('Controller@vogelwerkgroep') !!}">Vogelwerkgroep<span class="glyphicon glyphicon-leaf pull-right"></span></a></li>
-                            <li class="divider"></li>
-                            <li><a href="{!! action('Controller@fotos') !!}">Foto's<span class="glyphicon glyphicon-picture pull-right"></span></a></li>
-                            <li class="divider"></li>
-                            <li><a href="{!! action('Controller@contact') !!}">Contact<span class=" glyphicon glyphicon-earphone pull-right"></span></a></li>
+                            <li class="dropdown-item"><a href="{!! action('Controller@index') !!}"><div class="pull-left">Home</div><span class=" glyphicon glyphicon-home pull-right"></span></a></li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><a href="{!! action('Controller@activiteiten') !!}"><div class="pull-left">Activiteiten</div><span class=" glyphicon glyphicon-home pull-right"></span></a></li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><a href="{!! action('Controller@parkvereniging') !!}"><div class="pull-left">Parkvereniging</div><span class="glyphicon glyphicon-leaf pull-right"></span></a></li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><a href="{!! action('Controller@vogelwerkgroep') !!}"><div class="pull-left">Vogelwerkgroep</div><span class="glyphicon glyphicon-plane pull-right"></span></a></li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><a href="{!! action('Controller@fotos') !!}"><div class="pull-left">Foto's</div><span class="glyphicon glyphicon-picture pull-right"></span></a></li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><a href="{!! action('Controller@contact') !!}"><div class="pull-left">Contact</div><span class="glyphicon glyphicon-earphone pull-right"></span></a></li>
                         </ul>
                     </li>
                 </ul>
