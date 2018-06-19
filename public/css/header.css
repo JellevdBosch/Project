@@ -14,9 +14,19 @@
 .nav-span-open {
     color: #5d963f!important;
 }
-
 /* Large desktop */
 @media (min-width: 1200.1px) {
+
+    /*scroll effect*/
+    /*.header-trans {*/
+        /*background-color: transparent;*/
+        /*border: none;*/
+        /*transition: top 1s ease;*/
+    /*}*/
+    /*.header-trans.afterscroll {*/
+        /*top:-50px;*/
+    /*}*/
+    /*}*/
 
     #header {
         width: 100%;
@@ -446,36 +456,13 @@
         font-size: 1em;
     }
 
-
-
-
-    /*.dropdown ul.dropdown-menu:before {*/
-    /*content: "";*/
-    /*border-bottom: 10px solid #fff;*/
-    /*border-right: 10px solid transparent;*/
-    /*border-left: 10px solid transparent;*/
-    /*position: absolute;*/
-    /*top: -10px;*/
-    /*right: 16px;*/
-    /*z-index: 10;*/
-    /*}*/
-    /*.dropdown ul.dropdown-menu:after {*/
-    /*content: "";*/
-    /*border-bottom: 12px solid #ccc;*/
-    /*border-right: 12px solid transparent;*/
-    /*border-left: 12px solid transparent;*/
-    /*position: absolute;*/
-    /*top: -12px;*/
-    /*right: 14px;*/
-    /*z-index: 9;*/
-    /*}*/
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
     #header {
         width: 100%;
-        height: 80px;
+        height: 60px;
         background: white;
         z-index: 1000;
         position: fixed;
@@ -484,21 +471,95 @@
     #header-wrapper {
         width: inherit;
         height: inherit;
-        padding: 0;
+        padding: 10px 15px;
     }
 
+    /*DROPDOWN*/
+    #main-nav-dropdown {
+        display: block;
+        float: left;
+    }
+    #nav-drop {
+        height: inherit;
+        width: 100%;
+        margin: 0!important;
+    }
+    #nav-drop>li {
+        width:inherit;
+        height: inherit;
+    }
+    #nav-drop>li>a {
+        padding: 0!important;
+    }
+    #nav-drop>li>a{
+        display: inline-block;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    .nav .open>a {
+        background: none!important;
+    }
+    #nav-drop>li>a:hover,
+    #nav-drop>li>a:active,
+    #nav-drop>li>a:focus {
+        background: none;
+    }
+    #nav-drop>li>a>span {
+        color: #000;
+        font-size: x-large;
+        width: inherit;
+        height: inherit;
+    }
+    #nav-drop>li>a>span:hover,
+    #nav-drop>li>a>span:active,
+    #nav-drop>li>a>span:focus{
+        color: #5d963f;
+    }
+    #nav-drop .open .dropdown-menu {
+        background-color: #fff!important;
+        border-radius:2px;
+        box-shadow:none;
+        margin-top:15px;
+        width:auto;
+    }
+    #nav-drop .open .dropdown-menu .dropdown-item {
+        height: 40px;
+    }
+    #nav-drop .open .dropdown-menu .dropdown-divider {
+        margin: 0!important;
+        height: 1px;
+        background-color: #eee;
+    }
+    #nav-drop .open .dropdown-menu .dropdown-item>a {
+        background: transparent!important;
+        display: inline-block;
+        top: 50%;
+        transform: translate(0%);
+        width: 100%;
+    }
+    #nav-drop .open .dropdown-menu .dropdown-item>a:hover,
+    #nav-drop .open .dropdown-menu .dropdown-item>a:active,
+    #nav-drop .open .dropdown-menu .dropdown-item>a:focus{
+        background: transparent!important;
+    }
+
+    #nav-drop .open .dropdown-menu .dropdown-item>a {
+        padding: 10px 20px 10px 20px;
+    }
+    /*DROPDOWN*/
+
     #main-logo {
-        width: 70%;
+        width: 80%;
         height: 100%;
         float: left;
+        text-align: center;
     }
 
     #main-logo img {
         height: inherit;
-        padding: 10px;
         width: auto;
         max-width: 100%;
-        text-align: center;
     }
 
     #main-nav {
@@ -506,13 +567,18 @@
     }
 
     #main-nav-dropdown {
+        height: 100%;
+        width: 10%;
+        float: left;
+    }
+
+    #nav-dropdown {
         display: block;
-        width: 15%;
     }
 
     #login-info {
-        width: 15%;
-        height: inherit;
+        width: 10%;
+        height: 100%;
         float: right;
     }
 
@@ -522,6 +588,6 @@
         text-align: center;
     }
     #login-info p b {
-        font-size: 1em;
+        font-size: 0.5em;
     }
 }

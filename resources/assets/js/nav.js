@@ -1,10 +1,8 @@
-var ddOpen = document.getElementsByClassName('open');
-var ddSpan = document.getElementById('nav-span');
-
-if (ddOpen !== null) {
-    console.log('here');
-    ddSpan.style.color = "5d963f";
-} else {
-    console.log('there');
-    ddSpan.style.color = "ffffff";
+$('#dd-check').find('a').on('click', function (event) {
+    var ddcheck = document.getElementById('dd-check');
+    $(ddcheck).toggleClass('open');
+});
+function toggleClass() {
+    var ddSpan = document.getElementById('nav-span');
+    $(ddSpan).toggleClass("nav-span-open");
 }
