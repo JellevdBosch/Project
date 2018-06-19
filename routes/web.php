@@ -36,10 +36,6 @@ Route::view('/admin', 'admin');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin/image-gallery', 'ImageGalleryController@index');
+Route::post('/admin/image-gallery', 'ImageGalleryController@upload');
+Route::delete('/admin/image-gallery/{id}', 'ImageGalleryController@destroy');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Vogelwerkgroep;
+use App\ImageGallery;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -48,7 +49,9 @@ class Controller extends BaseController
     public function fotos()
     {
 
-        return view('fotos');
+
+	    $images = ImageGallery::get();
+	    return view('fotos',compact('images'));
 
     }
 
