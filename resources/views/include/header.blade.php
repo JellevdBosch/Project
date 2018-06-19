@@ -1,10 +1,9 @@
 <header id="header">
     <section id="header-wrapper">
         <div id="main-nav-dropdown">
-
                 <ul id="nav-drop" class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle " data-toggle="dropdown"><span class=" glyphicon glyphicon-align-justify"></span></a>
+                    <li id="dd-check" class="dropdown">
+                        <a href="#" class="dropdown-toggle "><span onclick="toggleClass()" id="nav-span"  class=" glyphicon glyphicon-align-justify"></span></a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-item"><a href="{!! action('Controller@index') !!}"><div class="pull-left">Home</div><span class=" glyphicon glyphicon-home pull-right"></span></a></li>
                             <li class="dropdown-divider"></li>
@@ -20,9 +19,17 @@
                         </ul>
                     </li>
                 </ul>
-
         </div>
-
+        <script>
+            $('#dd-check').find('a').on('click', function (event) {
+                var ddcheck = document.getElementById('dd-check');
+                $(ddcheck).toggleClass('open');
+            });
+            function toggleClass() {
+                var ddSpan = document.getElementById('nav-span');
+                $(ddSpan).toggleClass("nav-span-open");
+            }
+        </script>
         <div id="main-logo">
             <img src="{{asset('images/logo.png')}}" alt="Polderpark Cronesteyn Logo">
         </div>

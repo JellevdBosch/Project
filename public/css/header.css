@@ -11,6 +11,10 @@
     text-decoration: none;
 }
 
+.nav-span-open {
+    color: #5d963f!important;
+}
+
 /* Large desktop */
 @media (min-width: 1200.1px) {
 
