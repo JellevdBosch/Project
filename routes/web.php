@@ -18,9 +18,6 @@ Route::get('/activiteiten', 'Controller@activiteiten');
 
 Route::get('/parkvereniging', 'Controller@parkvereniging');
 
-Route::get('/vogelwerkgroep', function () {
-    return view('vogelwerkgroep');
-});
 Route::get('/vogelwerkgroep', 'Controller@vogelwerkgroep');
 
 Route::get('/fotos', 'Controller@fotos');
@@ -28,11 +25,10 @@ Route::get('/fotos', 'Controller@fotos');
 Route::get('/contact', 'Controller@contact');
 Route::post('/contact', 'Controller@contact');
 
-Route::get('/test', 'Controller@test');
+Route::get('/artikel', 'Controller@Artikel');
+Route::post('/admin', 'Controller@createArtikel');
 
-Route::post('/test', 'Controller@createArtikel');
-
-Route::view('/admin', 'admin');
+Route::get('/admin', 'Controller@admin');
 
 Route::get('/home', 'HomeController@index')->name('home');
 

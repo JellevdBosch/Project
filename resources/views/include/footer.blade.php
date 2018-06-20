@@ -19,7 +19,7 @@
     </section>
     <section id="footer-bottom">
         <div id="footer-bottom-wrapper">
-            <p>Footer include</p>
+            <p><a href="mailto:polderparkcronesteyn@leiden.info" target="_top"><span style="color:#ffffff;">polderparkcronesteyn@leiden.info</span></a></p>
         </div>
     </section>
 

@@ -1,47 +1,37 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Image Gallery Example</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- References: https://github.com/fancyapps/fancyBox -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
-          media="screen">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 
-    <style type="text/css">
-        .gallery {
-            display: inline-block;
-            margin-top: 20px;
-        }
+<style type="text/css">
+    .gallery {
+        display: inline-block;
+        margin-top: 20px;
+    }
 
-        .close-icon {
-            border-radius: 50%;
-            position: absolute;
-            right: 5px;
-            top: -10px;
-            padding: 5px 8px;
-        }
+    .close-icon {
+        border-radius: 50%;
+        position: absolute;
+        right: 5px;
+        top: -10px;
+        padding: 5px 8px;
+    }
 
-        .form-image-upload {
-            background: #e8e8e8 none repeat scroll 0 0;
-            padding: 15px;
-        }
-    </style>
-</head>
-<body>
+    .form-image-upload {
+        background: #e8e8e8 none repeat scroll 0 0;
+        padding: 15px;
+    }
+</style>
 
 <div class="container">
 
     <h3>Image Gallery <span style="float:right"><a href="{{ url('fotos') }}">Naar fotos</a></span></h3>
-    <form action="{{ url('admin/image-gallery') }}" class="form-image-upload" method="POST" enctype="multipart/form-data">
+    <form action="{{ url('admin/image-gallery') }}" class="form-image-upload" method="POST"
+          enctype="multipart/form-data">
 
         {!! csrf_field() !!}
 
         @if (count($errors) > 0)
             <div class="alert alert-danger">
-                <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                <strong>Whoops!</strong> Er zijn problemen met je input.<br><br>
                 <ul>
                     @foreach ($errors->all() as $error)
                         <li>{{ $error }}</li>
@@ -50,21 +40,14 @@
             </div>
         @endif
 
-        @if ($message = Session::get('success'))
-            <div class="alert alert-success alert-block">
-                <button type="button" class="close" data-dismiss="alert">×</button>
-                <strong>{{ $message }}</strong>
-            </div>
-        @endif
-
         <div class="row">
             <div class="col-md-5">
                 <strong>Title:</strong>
-                <input type="text" name="title" class="form-control" placeholder="Title">
+                <input autocomplete="off" type="text" name="title" class="form-control" placeholder="Title">
             </div>
             <div class="col-md-5">
                 <strong>Image:</strong>
-                <input type="file" name="image" class="form-control">
+                <input autocomplete="off" type="file" name="image" class="form-control">
             </div>
             <div class="col-md-2">
                 <br/>
@@ -101,8 +84,6 @@
     </div>
 </div>
 
-</body>
-
 <script type="text/javascript">
     $(document).ready(function () {
         $(".fancybox").fancybox({
@@ -111,5 +92,3 @@
         });
     });
 </script>
-
-</html>
