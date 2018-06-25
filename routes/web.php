@@ -11,7 +11,7 @@
 |
 */
 
-
+// ROUTES FOR REGULAR PAGES
 Route::get('/', 'Controller@index');
 
 Route::get('/activiteiten', 'Controller@activiteiten');
@@ -23,15 +23,21 @@ Route::get('/vogelwerkgroep', 'Controller@vogelwerkgroep');
 Route::get('/fotos', 'Controller@fotos');
 
 Route::get('/contact', 'Controller@contact');
-Route::post('/contact', 'Controller@contact');
 
-Route::get('/artikel', 'Controller@Artikel');
-Route::post('/admin', 'Controller@createArtikel');
-
-Route::get('/admin', 'Controller@admin');
-
+// WTF IS THIS
 Route::get('/home', 'HomeController@index')->name('home');
+
+// ROUTES FOR ADMIN
+Route::get('/admin', 'Controller@admin');
 
 Route::get('/admin/image-gallery', 'ImageGalleryController@index');
 Route::post('/admin/image-gallery', 'ImageGalleryController@upload');
 Route::delete('/admin/image-gallery/{id}', 'ImageGalleryController@destroy');
+
+Route::get('/admin/activiteiten', 'ActiviteitController@index');
+Route::post('/admin/activiteiten', 'ActiviteitController@upload');
+Route::delete('/admin/activiteiten/{id}', 'ActiviteitController@destroy');
+
+Route::get('/admin/artikel', 'ArtikelController@index');
+Route::post('/admin/artikel', 'ArtikelController@upload');
+Route::delete('/admin/artikel/{id}', 'ArtikelController@destroy');
