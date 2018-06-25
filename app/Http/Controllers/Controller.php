@@ -28,9 +28,10 @@ class Controller extends BaseController
 
 	public function activiteiten()
 	{
-
-		return view('activiteiten');
-
+        $activities = DB::table('activities')
+            ->orderBy('created_at', 'desc')
+            ->get();
+		return view('activiteiten', ['activities' => $activities]);
 	}
 
 	public function parkvereniging()
@@ -60,11 +61,6 @@ class Controller extends BaseController
 
 		return view('contact');
 
-	}
-
-	public function Artikel()
-	{
-		return view('admin/artikel');
 	}
 
 	public function createArtikel()

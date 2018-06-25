@@ -47,8 +47,11 @@
         height: 100%;
         float: left;
     }
+    #main-logo a {
+        height: inherit;
+    }
 
-    #main-logo img {
+    #main-logo a img {
         height: inherit;
         padding: 10px;
         width: initial;
@@ -146,8 +149,10 @@
         height: 100%;
         float: left;
     }
-
-    #main-logo img {
+    #main-logo a {
+        height: inherit;
+    }
+    #main-logo a img {
         height: inherit;
         padding: 10px;
         width: auto;
@@ -245,8 +250,10 @@
         height: 100%;
         float: left;
     }
-
-    #main-logo img {
+    #main-logo a {
+        height: inherit;
+    }
+    #main-logo a img {
         height: inherit;
         padding: 10px;
         width: auto;
@@ -421,12 +428,14 @@
         text-align: center;
     }
 
-    #main-logo img {
+    #main-logo a img {
         height: inherit;
         width: auto;
         max-width: 100%;
     }
-
+    #main-logo a {
+        height: inherit;
+    }
     #main-nav {
         display: none;
     }
@@ -555,8 +564,10 @@
         float: left;
         text-align: center;
     }
-
-    #main-logo img {
+    #main-logo a {
+        height: inherit;
+    }
+    #main-logo a img {
         height: inherit;
         width: auto;
         max-width: 100%;

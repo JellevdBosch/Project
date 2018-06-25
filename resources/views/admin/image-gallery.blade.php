@@ -1,7 +1,19 @@
+<!DOCTYPE html>
+@extends('layout.layout')
+
+@section('title')
+    Admin | Activiteiten
+@endsection
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-
-<style type="text/css">
+<style>
+    .wrapper {
+        margin: auto !important;
+        width: 100% !important;
+    }
+    .tabs li a {
+        color: #5d963f;
+    }
     .gallery {
         display: inline-block;
         margin-top: 20px;
@@ -14,16 +26,32 @@
         top: -10px;
         padding: 5px 8px;
     }
-
-    .form-image-upload {
-        background: #e8e8e8 none repeat scroll 0 0;
-        padding: 15px;
-    }
 </style>
-
-<div class="container">
-
-    <h3>Image Gallery <span style="float:right"><a href="{{ url('fotos') }}">Naar fotos</a></span></h3>
+@section('content')
+    @if(Session::has('success'))
+        <div class="container">
+            <div class="alert alert-success alert-block">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                {{ Session::get('success') }}
+                @php
+                    Session::forget('success');
+                @endphp
+            </div>
+        </div>
+    @endif
+    <div style="margin-bottom: 120px;" class="container">
+        <div class="col-lg-2">
+            <nav class="nav-sidebar">
+                <ul class="nav tabs">
+                    <li class="active">
+                        <a href="{{ url('admin/image-gallery') }}">Afbeeldingen</a>
+                    </li>
+                    <li class=""><a href="{{ url('admin/activiteiten') }}">Activiteiten</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-lg-10">
+    <h3>Afbeeldingen Gallerij <span style="float:right"><a style="color: #5d963f" href="{{ url('fotos') }}">Naar Foto's</a></span></h3>
     <form action="{{ url('admin/image-gallery') }}" class="form-image-upload" method="POST"
           enctype="multipart/form-data">
 
@@ -41,15 +69,18 @@
         @endif
 
         <div class="row">
-            <div class="col-md-5">
-                <strong>Title:</strong>
-                <input autocomplete="off" type="text" name="title" class="form-control" placeholder="Title">
+            <div class="form-group col-md-4">
+                <label for="title">Titel:
+                    <input autocomplete="off" type="text" name="title" class="form-control" placeholder="Title">
+                </label>
             </div>
-            <div class="col-md-5">
-                <strong>Image:</strong>
-                <input autocomplete="off" type="file" name="image" class="form-control">
+            <div class="form-group col-md-4">
+                <label for="image">Afbeelding:
+                    <input autocomplete="off" type="file" name="image" class="form-control">
+                </label>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-12"></div>
+            <div class="form-group col-md-4">
                 <br/>
                 <button type="submit" class="btn btn-success">Upload</button>
             </div>
@@ -59,8 +90,7 @@
 
     <div class="row">
         <div class='list-group gallery'>
-
-            @if($images->count())
+            @if(!empty($images) && $images->count())
                 @foreach($images as $image)
                     <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
                         <a class="thumbnail fancybox" rel="ligthbox"
@@ -79,11 +109,8 @@
                     </div>
                 @endforeach
             @endif
-
         </div>
     </div>
-</div>
-
 <script type="text/javascript">
     $(document).ready(function () {
         $(".fancybox").fancybox({
@@ -92,3 +119,6 @@
         });
     });
 </script>
+        </div>
+    </div>
+@endsection

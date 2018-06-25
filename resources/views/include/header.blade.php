@@ -31,7 +31,7 @@
             }
         </script>
         <div id="main-logo">
-            <img src="{{asset('images/logo.png')}}" alt="Polderpark Cronesteyn Logo">
+            <a href="{!! action('Controller@index') !!}"><img src="{{asset('images/logo.png')}}" alt="Polderpark Cronesteyn Logo"></a>
         </div>
         <div id="main-nav">
             <nav id="main-nav-wrapper">

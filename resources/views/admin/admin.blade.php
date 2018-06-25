@@ -4,12 +4,16 @@
 @section('title')
     Admin
 @endsection
-<style>.wrapper {
+<style>
+    .wrapper {
         margin: auto !important;
         width: 100% !important;
-    }</style>
+    }
+    .tabs li a {
+        color: #5d963f;
+    }
+</style>
 @section('content')
-
     @if(Session::has('success'))
         <div class="container">
             <div class="alert alert-success alert-block">
@@ -21,17 +25,21 @@
             </div>
         </div>
     @endif
-    <div>
-        @include('admin.image-gallery')
+    <div style="margin-bottom: 90px;" class="container">
+        <div class="col-lg-2">
+            <nav class="nav-sidebar">
+                <ul class="nav tabs">
+                    <li class="active">
+                        <a href="{{ url('admin/image-gallery') }}">Afbeeldingen</a>
+                    </li>
+                    <li class=""><a href="{{ url('admin/activiteiten') }}">Activiteiten</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-lg-10">
+            <h3>
+                What do you want to do?
+            </h3>
+        </div>
     </div>
-
-    <hr>
-
-    <div class="container">
-
-        @include('admin.Artikel')
-
-    </div>
-
-
 @endsection
