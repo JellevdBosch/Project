@@ -51,7 +51,7 @@
             </nav>
         </div>
         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-            <h3 class="text-center" style="margin-bottom: 30px">Afbeelding toevoegen</h3>
+            <h3 class="" style="margin-bottom: 30px">Afbeelding toevoegen</h3>
             <form action="{{ url('admin/image-gallery') }}" class="form-image-upload" method="POST"
             enctype="multipart/form-data">
 
@@ -86,28 +86,30 @@
                 </div>
             </form>
             <div class="row">
-                <h3 class="text-center" style="color: #5d963f">Afbeeldingen Verwijderen:</h3>
-                <div class='list-group gallery'>
-                    @if(!empty($images) && $images->count())
-                        @foreach($images as $image)
-                            <div class='col-sm-5 col-xs-5 col-md-3 col-lg-3'>
-                                <a class="thumbnail fancybox" rel="ligthbox"
-                                href="{{asset('/images/gallery/'. $image->image)}}">
-                                    <img class="img-responsive" alt="" src="{{asset('/images/gallery/'. $image->image)}}"/>
-                                    <div class='text-center'>
-                                        <small class='text-muted'>{{ $image->title }}</small>
-                                    </div>
-                                </a>
-                                <form action="{{ url('admin/image-gallery/' . $image->image . '/' . $image->id) }}" method="POST">
-                                    <input type="hidden" name="_method" value="delete">
-                                    {!! csrf_field() !!}
-                                    <button type="submit" class="close-icon btn btn-danger">
-                                        <i class="glyphicon glyphicon-remove"></i>
-                                    </button>
-                                </form>
-                            </div>
-                        @endforeach
-                    @endif
+                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                    <h3 class="" style="color: #5d963f">Afbeeldingen Verwijderen:</h3>
+                    <div class='list-group gallery'>
+                        @if(!empty($images) && $images->count())
+                            @foreach($images as $image)
+                                <div class='col-sm-5 col-xs-5 col-md-3 col-lg-3'>
+                                    <a class="thumbnail fancybox" rel="ligthbox"
+                                       href="{{asset('/images/gallery/'. $image->image)}}">
+                                        <img class="img-responsive" alt="" src="{{asset('/images/gallery/'. $image->image)}}"/>
+                                        <div class='text-center'>
+                                            <small class='text-muted'>{{ $image->title }}</small>
+                                        </div>
+                                    </a>
+                                    <form action="{{ url('admin/image-gallery/' . $image->image . '/' . $image->id) }}" method="POST">
+                                        <input type="hidden" name="_method" value="delete">
+                                        {!! csrf_field() !!}
+                                        <button type="submit" class="close-icon btn btn-danger">
+                                            <i class="glyphicon glyphicon-remove"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            @endforeach
+                        @endif
+                    </div>
                 </div>
             </div>
 <script type="text/javascript">
