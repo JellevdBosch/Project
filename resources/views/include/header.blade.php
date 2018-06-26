@@ -59,7 +59,7 @@
         </div>
         <div id="login-info">
             <p>
-                <b>Welkom Jelle</b>
+                <b>Welkom</b>
             </p>
         </div>
     </section>
