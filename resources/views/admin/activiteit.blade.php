@@ -82,20 +82,23 @@
                 </div>
             </form>
             <div class="row">
+                <h3 style="color: #5d963f">Delete Activities:</h3>
                 <div class='list-group gallery'>
-                    @if(!empty($activiteiten) && $activiteiten->count())
-                        @foreach($activiteiten as $activiteit)
-                            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
-                                <div class='text-center'>
-                                    <small class='text-muted'>{{ $activiteit->title }}</small>
-                                </div>
-                                <form action="{{ url('admin/activiteit',$activiteit->id) }}" method="POST">
+                    @if(!empty($activities) && $activities->count())
+                        @foreach($activities as $activity)
+                            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3' style="border: 0.5px solid #5d963f; padding: 10px">
+                                <form action="{{ url('admin/activiteiten/',$activity->id) }}" method="POST">
                                     <input type="hidden" name="_method" value="delete">
                                     {!! csrf_field() !!}
-                                    <button type="submit" class="close-icon btn btn-danger">
-                                        <i class="glyphicon glyphicon-remove"></i>
+                                    <button type="submit" style="background: none;" class="close-icon btn">
+                                        <i style="color: #5d963f; font-size: 18px;" class="glyphicon glyphicon-remove"></i>
                                     </button>
                                 </form>
+                                <div class='text-center'>
+                                    <small class='text-muted'>{{ $activity->title }}</small><br>
+                                    <small class='text-muted'>{{ $activity->activity }}</small><br>
+                                    <small class='text-muted'>{{ $activity->date }}</small><br>
+                                </div>
                             </div>
                         @endforeach
                     @endif
