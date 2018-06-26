@@ -84,7 +84,7 @@
                         @if(!empty($activities) && $activities->count())
                             @foreach($activities as $activity)
                                 <div class='col-sm-11 col-xs-11 col-md-3 col-lg-3' style="margin:15px;max-height:250px;height:250px;overflow-y:hidden;border: 0.5px solid #5d963f; padding: 10px">
-                                    <form action="{{ url('admin/activiteiten/',$activity->id) }}" method="POST">
+                                    <form action="{{ url('admin/activiteiten',$activity->id) }}" method="POST">
                                         <input type="hidden" name="_method" value="delete">
                                         {!! csrf_field() !!}
                                         <button type="submit" style="background: none;padding: 0" class="close-icon btn">
