@@ -100,7 +100,7 @@
                                 <small class='text-muted'>{{ $image->title }}</small>
                             </div>
                         </a>
-                        <form action="{{ url('admin/image-gallery',$image->id) }}" method="POST">
+                        <form action="{{ url('admin/image-gallery/' . $image->image . '/' . $image->id) }}" method="POST">
                             <input type="hidden" name="_method" value="delete">
                             {!! csrf_field() !!}
                             <button type="submit" class="close-icon btn btn-danger"><i

@@ -32,7 +32,7 @@ Route::get('/admin', 'Controller@admin');
 
 Route::get('/admin/image-gallery', 'ImageGalleryController@index');
 Route::post('/admin/image-gallery', 'ImageGalleryController@upload');
-Route::delete('/admin/image-gallery/{id}', 'ImageGalleryController@destroy');
+Route::delete('/admin/image-gallery/{image}/{id}', 'ImageGalleryController@destroy');
 
 Route::get('/admin/activiteiten', 'ActiviteitController@index');
 Route::post('/admin/activiteiten', 'ActiviteitController@upload');

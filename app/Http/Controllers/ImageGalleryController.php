@@ -6,7 +6,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\ImageGallery;
-
+use Illuminate\Support\Facades\File;
 
 class ImageGalleryController extends Controller
 {
@@ -38,7 +38,7 @@ class ImageGalleryController extends Controller
 		]);
 
 
-		$input['image'] = time().'.'.$request->image->getClientOriginalExtension();
+		$input['image'] = $request->title.'.'.$request->image->getClientOriginalExtension();
 		$request->image->move(public_path('images/gallery'), $input['image']);
 
 
@@ -55,10 +55,22 @@ class ImageGalleryController extends Controller
 	 *
 	 * @return \Illuminate\Http\Response
 	 */
-	public function destroy($id)
+	public function destroy($image, $id)
 	{
-		ImageGallery::find($id)->delete();
+        $path = public_path('images\gallery\\');
 
-		return back()->with('success','Image removed successfully.');
+        if(File::exists($path. $image)) {
+
+            ImageGallery::find($id)->delete();
+
+            File::delete($path. $image);
+
+        } else {
+
+            return back()->with('success','Failed to delete: .' . $image);
+
+        }
+
+        return back()->with('success','Image removed successfully.');
 	}
 }
