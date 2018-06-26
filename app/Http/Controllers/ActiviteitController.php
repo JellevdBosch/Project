@@ -12,7 +12,8 @@ class ActiviteitController extends Controller
      */
     public function index()
     {
-        return view('/admin/activiteit');
+        $activities = Activiteit::get();
+        return view('/admin/activiteit',compact('activities'));
     }
 
     /**
@@ -34,5 +35,17 @@ class ActiviteitController extends Controller
 
 
         return back()->with('success','Activiteit succesvol gemaakt!');
+    }
+
+    /**
+     * Remove activity function
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        Activiteit::find($id)->delete();
+
+        return back()->with('success','Activiteit succesvol verwijderd.');
     }
 }

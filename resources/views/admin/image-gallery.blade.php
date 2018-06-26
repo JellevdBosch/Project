@@ -2,7 +2,7 @@
 @extends('layout.layout')
 
 @section('title')
-    Admin | Activiteiten
+    Admin | Afbeelding
 @endsection
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
@@ -40,7 +40,7 @@
         </div>
     @endif
     <div style="margin-bottom: 120px;" class="container">
-        <div class="col-lg-2">
+        <div class="col-lg-2 col-sm-12 col-xs-12 col-md-2">
             <nav class="nav-sidebar">
                 <ul class="nav tabs">
                     <li class="active">
@@ -50,67 +50,66 @@
                 </ul>
             </nav>
         </div>
-        <div class="col-lg-10">
-    <h3>Afbeeldingen Gallerij <span style="float:right"><a style="color: #5d963f" href="{{ url('fotos') }}">Naar Foto's</a></span></h3>
-    <form action="{{ url('admin/image-gallery') }}" class="form-image-upload" method="POST"
-          enctype="multipart/form-data">
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+            <h3 class="text-center" style="margin-bottom: 30px">Afbeelding toevoegen</h3>
+            <form action="{{ url('admin/image-gallery') }}" class="form-image-upload" method="POST"
+            enctype="multipart/form-data">
 
-        {!! csrf_field() !!}
+                {!! csrf_field() !!}
 
-        @if (count($errors) > 0)
-            <div class="alert alert-danger">
-                <strong>Whoops!</strong> Er zijn problemen met je input.<br><br>
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-
-        <div class="row">
-            <div class="form-group col-md-4">
-                <label for="title">Titel:
-                    <input autocomplete="off" type="text" name="title" class="form-control" placeholder="Title">
-                </label>
-            </div>
-            <div class="form-group col-md-4">
-                <label for="image">Afbeelding:
-                    <input autocomplete="off" type="file" name="image" class="form-control">
-                </label>
-            </div>
-            <div class="col-md-12"></div>
-            <div class="form-group col-md-4">
-                <br/>
-                <button type="submit" class="btn btn-success">Upload</button>
-            </div>
-        </div>
-
-    </form>
-
-    <div class="row">
-        <div class='list-group gallery'>
-            @if(!empty($images) && $images->count())
-                @foreach($images as $image)
-                    <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
-                        <a class="thumbnail fancybox" rel="ligthbox"
-                           href="{{asset('/images/gallery/'. $image->image)}}">
-                            <img class="img-responsive" alt="" src="{{asset('/images/gallery/'. $image->image)}}"/>
-                            <div class='text-center'>
-                                <small class='text-muted'>{{ $image->title }}</small>
-                            </div>
-                        </a>
-                        <form action="{{ url('admin/image-gallery/' . $image->image . '/' . $image->id) }}" method="POST">
-                            <input type="hidden" name="_method" value="delete">
-                            {!! csrf_field() !!}
-                            <button type="submit" class="close-icon btn btn-danger"><i
-                                        class="glyphicon glyphicon-remove"></i></button>
-                        </form>
+                @if (count($errors) > 0)
+                    <div class="alert alert-danger">
+                        <strong>Whoops!</strong> Er zijn problemen met je input.<br><br>
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
                     </div>
-                @endforeach
-            @endif
-        </div>
-    </div>
+                @endif
+                <div class="row">
+                    <div class="form-group col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                        <label for="title">Titel:
+                            <input autocomplete="off" type="text" name="title" class="form-control" placeholder="Title">
+                        </label>
+                    </div>
+                    <div class="form-group col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                        <label for="image">Afbeelding:
+                            <input autocomplete="off" type="file" name="image" class="form-control">
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <button type="submit" class="btn btn-success">Upload</button>
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <h3 class="text-center" style="color: #5d963f">Afbeeldingen Verwijderen:</h3>
+                <div class='list-group gallery'>
+                    @if(!empty($images) && $images->count())
+                        @foreach($images as $image)
+                            <div class='col-sm-5 col-xs-5 col-md-3 col-lg-3'>
+                                <a class="thumbnail fancybox" rel="ligthbox"
+                                href="{{asset('/images/gallery/'. $image->image)}}">
+                                    <img class="img-responsive" alt="" src="{{asset('/images/gallery/'. $image->image)}}"/>
+                                    <div class='text-center'>
+                                        <small class='text-muted'>{{ $image->title }}</small>
+                                    </div>
+                                </a>
+                                <form action="{{ url('admin/image-gallery/' . $image->image . '/' . $image->id) }}" method="POST">
+                                    <input type="hidden" name="_method" value="delete">
+                                    {!! csrf_field() !!}
+                                    <button type="submit" class="close-icon btn btn-danger">
+                                        <i class="glyphicon glyphicon-remove"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        @endforeach
+                    @endif
+                </div>
+            </div>
 <script type="text/javascript">
     $(document).ready(function () {
         $(".fancybox").fancybox({
