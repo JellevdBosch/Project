@@ -78,7 +78,7 @@
                 </div>
             </form>
             <div class="row text-center">
-                <h3 style="color: #5d963f">Verwijder Activiteiten:</h3>
+                <h3 style="color: #5d963f">Activiteiten Verwijderen:</h3>
                 <div class='list-group gallery'>
                     @if(!empty($activities) && $activities->count())
                         @foreach($activities as $activity)

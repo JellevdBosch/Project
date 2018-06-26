@@ -85,8 +85,8 @@
                     </div>
                 </div>
             </form>
-            <div class="row text-center">
-                <h3 style="color: #5d963f">Verwijder Afbeeldingen:</h3>
+            <div class="row">
+                <h3 class="text-center" style="color: #5d963f">Afbeeldingen Verwijderen:</h3>
                 <div class='list-group gallery'>
                     @if(!empty($images) && $images->count())
                         @foreach($images as $image)
