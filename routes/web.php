@@ -41,3 +41,10 @@ Route::delete('/admin/activiteiten/{id}', 'ActiviteitController@destroy');
 Route::get('/admin/artikel', 'ArtikelController@index');
 Route::post('/admin/artikel', 'ArtikelController@upload');
 Route::delete('/admin/artikel/{id}', 'ArtikelController@destroy');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
