@@ -13,6 +13,10 @@
         color: #5d963f;
     }
 </style>
+@if(Auth::check()) {
+// The user is logged in...
+}
+@endif
 @section('content')
     @if(Session::has('success'))
         <div class="container">

@@ -38,9 +38,9 @@ Route::get('/admin/activiteiten', 'ActiviteitController@index');
 Route::post('/admin/activiteiten', 'ActiviteitController@upload');
 Route::delete('/admin/activiteiten/{id}', 'ActiviteitController@destroy');
 
-Route::get('/admin/artikel', 'ArtikelController@index');
-Route::post('/admin/artikel', 'ArtikelController@upload');
-Route::delete('/admin/artikel/{id}', 'ArtikelController@destroy');
+Route::get('/admin/artikel', 'AdminController@index');
+Route::post('/admin/artikel', 'AdminController@upload');
+Route::delete('/admin/artikel/{id}', 'AdminController@destroy');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -52,3 +52,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/user', 'HomeController@user');
