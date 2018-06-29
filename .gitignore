@@ -18,3 +18,5 @@ package\.json
 webpack\.mix\.js
 
 composer\.lock
+
+_ide_helper\.php
