@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 @extends('layout.layout')
 
 @section('title')
@@ -38,7 +37,7 @@
         </div>
         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
             <h3 style="margin-bottom: 30px">Activiteit toevoegen</h3>
-            <form action="{{ url('admin/activiteiten') }}" class="form-image-upload" method="POST"
+            <form action="{{ url('admin/activiteiten') }}" method="POST"
                 enctype="multipart/form-data">
                 {!! csrf_field() !!}
                 @if ($errors->any())
@@ -79,23 +78,28 @@
             </form>
             <div class="row">
                 <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-                    <h3 style="color: #5d963f">Activiteiten Verwijderen:</h3>
+                    <h3 style="color: #5d963f">Activiteiten Overzicht:</h3>
                     <div class='list-group gallery'>
                         @if(!empty($activities) && $activities->count())
                             @foreach($activities as $activity)
-                                <div class='col-sm-11 col-xs-11 col-md-3 col-lg-3' style="margin:15px;max-height:250px;height:250px;overflow-y:hidden;border: 0.5px solid #5d963f; padding: 10px">
-                                    <form action="{{ url('admin/activiteiten',$activity->id) }}" method="POST">
-                                        <input type="hidden" name="_method" value="delete">
-                                        {!! csrf_field() !!}
-                                        <button type="submit" style="background: none;padding: 0" class="close-icon btn">
-                                            <i style="color: #5d963f; font-size: 18px;" class="glyphicon glyphicon-remove"></i>
-                                        </button>
-                                    </form>
-                                    <div class='text-left' style="max-width: 100%; overflow-x: hidden; overflow-y: hidden">
+                                <div class='col-sm-11 col-xs-11 col-md-3 col-lg-3' style="margin:15px;max-height:250px;height:250px;overflow-y:hidden;border: 0.5px solid #5d963f;padding:10px 0">
+                                    <div class="col-md-12">
+                                        <form style="padding: 0" class="pull-left col-md-6" action="{{ url('admin/activiteiten',$activity->id) }}" method="POST">
+                                            <input type="hidden" name="_method" value="delete">
+                                            {!! csrf_field() !!}
+                                            <button type="submit" style="background: none;padding: 0" class="close-icon btn">
+                                                <i style="color: #5d963f; font-size: 24px;" class="glyphicon glyphicon-remove"></i>
+                                            </button>
+                                        </form>
+                                        <a style="color: #5d963f; font-size: 18px;" href="{{ url('admin/edit/activiteit',$activity->id) }}">
+                                            Wijzig
+                                        </a>
+                                    </div>
+                                    <div class='col-md-12 text-left' style="max-width: 100%;">
                                         <h6><b class='text-muted'>{{ $activity->title }}</b></h6>
                                         <p style="max-width: inherit;height: 125px;max-height: 125px; overflow-y: scroll;
                                     overflow-x: hidden;overflow-wrap: break-word;" class='text-muted'>{{ $activity->activity }}</p>
-                                        <small style="padding: 10px" class='text-muted'>{{ $activity->date }}</small><br>
+                                        <small style="padding: 10px 0" class='text-muted'>{{ $activity->date }}</small><br>
                                     </div>
                                 </div>
                             @endforeach

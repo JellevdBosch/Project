@@ -54,3 +54,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/user', 'HomeController@user');
+
+// EDITS
+Route::get('/admin/edit/activiteit/{id}', 'ActiviteitController@read');
+Route::post('/admin/edit/activiteit', 'ActiviteitController@update');
