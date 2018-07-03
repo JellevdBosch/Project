@@ -58,3 +58,6 @@ Route::get('/user', 'HomeController@user');
 // EDITS
 Route::get('/admin/edit/activiteit/{id}', 'ActiviteitController@read');
 Route::post('/admin/edit/activiteit', 'ActiviteitController@update');
+Route::post('/admin/edit/activiteit', 'ActiviteitController@update');
+Route::get('/admin/edit/activiteit/{id}', 'ActiviteitController@read');
+// EDITS
