@@ -51,7 +51,8 @@
                 @endif
                 <div class="row">
                     <div class="form-group col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <input style="display: none" type="hidden" name="id" hidden readonly="readonly">{{ $activities->id }}</input>
+                        <input style="display: none" type="hidden" name="id" hidden readonly="readonly"
+                               value="{{ $activities->id }}"/>
                         <label for="title">Titel:
                             <input autocomplete="off" value="{{ $activities->title }}" type="text" class="form-control" name="title">
                         </label>
